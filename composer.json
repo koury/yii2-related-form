@@ -1,14 +1,12 @@
 {
     "name": "tolik505/yii2-related-form",
-    "description": "It is widget for melon.ng to clone form elements of related models.",
+    "description": "It is a widget for melon.ng to clone form elements of related models.",
     "keywords": [
         "tolik505",
         "yii2",
         "extension",
         "widget",
-        "yii2-related-form",
-        "copy DOM element",
-        "yii2 related form"
+        "melon.ng"
     ],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
@@ -19,7 +17,7 @@
     },
     "authors": [
         {
-            "name": "Anatlii Pipko",
+            "name": "tolik505",
             "email": "videoller@gmail.com"
         }
     ],

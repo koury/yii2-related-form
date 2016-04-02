@@ -1,7 +1,7 @@
 yii2-related-form
 ===================
 
-It is widget for melon.ng to clone form elements of related models.
+It is a widget for melon.ng to clone form elements of related models.
 
 Installation
 ------------
