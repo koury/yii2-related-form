@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "tolik505\\relatedform\\": "src"
+            "tolik505\\relatedForm\\": "src"
         }
     }
 }

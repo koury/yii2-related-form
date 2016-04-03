@@ -1,11 +1,11 @@
 <?php
 /**
  * @link      https://github.com/tolik505/yii2-related-form
- * @copyright Copyright (c) 2016 Anatolii Pipko
+ * @copyright Copyright (c) 2016 tolik505
  * @license   https://github.com/tolik505/yii2-related-form/blob/master/LICENSE
  */
 
-namespace tolik505\relatedform;
+namespace tolik505\relatedForm;
 
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;
@@ -18,7 +18,7 @@ use yii\base\InvalidConfigException;
 /**
  * Class RelatedFormWidget
  *
- * @package tolik505\relatedform
+ * @package tolik505\relatedForm
  */
 class RelatedFormWidget extends \yii\base\Widget
 {
