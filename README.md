@@ -11,13 +11,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist tolik505/yii2-related-form "*"
+composer require tolik505/yii2-related-form
 ```
 
 or add
 
 ```
-"tolik505/yii2-related-form": "*"
+"tolik505/yii2-related-form": "dev-master"
 ```
 
 to the require section of your `composer.json` file.

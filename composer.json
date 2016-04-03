@@ -2,7 +2,6 @@
     "name": "tolik505/yii2-related-form",
     "description": "It is a widget for melon.ng to clone form elements of related models.",
     "keywords": [
-        "tolik505",
         "yii2",
         "extension",
         "widget",
@@ -26,7 +25,9 @@
         "symfony/dom-crawler": "~2.6.6",
         "symfony/css-selector": "~2.6.6"
     },
-    "require-dev": {
-        "yiisoft/yii2-codeception": "*"
+    "autoload": {
+        "psr-4": {
+            "tolik505\\relatedform\\": "src"
+        }
     }
 }
