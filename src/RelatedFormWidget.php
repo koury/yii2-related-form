@@ -201,7 +201,7 @@ class RelatedFormWidget extends \yii\base\Widget
      */
     public function registerAssets($view)
     {
-        DynamicFormAsset::register($view);
+        RelatedFormAsset::register($view);
 
         // add a click handler for the clone button
         $js = 'jQuery("#' . $this->formId . '").on("click", "' . $this->insertButton . '", function(e) {'. "\n";
