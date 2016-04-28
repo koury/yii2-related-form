@@ -27,7 +27,7 @@ class RelatedFormWidget extends \yii\base\Widget
      * @var string
      */
     public $widgetContainer;
-     /**
+    /**
      * @var string
      */
     public $widgetBody;
@@ -43,7 +43,7 @@ class RelatedFormWidget extends \yii\base\Widget
      * @var string
      */
     public $insertButton;
-     /**
+    /**
      * @var string
      */
     public $deleteButton;
@@ -51,7 +51,7 @@ class RelatedFormWidget extends \yii\base\Widget
      * @var string 'bottom' or 'top';
      */
     public $insertPosition = 'bottom';
-     /**
+    /**
      * @var Model|ActiveRecord the model used for the form
      */
     public $model;
@@ -136,7 +136,7 @@ class RelatedFormWidget extends \yii\base\Widget
         $this->_options['fields']          = [];
 
         foreach ($this->formFields as $field) {
-             $this->_options['fields'][] = [
+            $this->_options['fields'][] = [
                 'id' => Html::getInputId($this->model, '[{}]' . $field),
                 'name' => Html::getInputName($this->model, '[{}]' . $field)
             ];

@@ -141,8 +141,7 @@
                 'data': {className: $elem[0].getAttribute("data-classname"), container: widgetOptions.widgetContainer, index: count},
                 'success':
                     function (response) {
-                        response.replaces[0].data = response.replaces[0].data
-                            .replace(/<form id="dummy-form" action="\/configuration\/default\/get-new-row" method="post">/, '');
+                        response.replaces[0].data = response.replaces[0].data.replace(/<form (.*?)>/, '');
                         parseResponse(response);
                         initCheckbox();
                     }, 'error': function (response) {
