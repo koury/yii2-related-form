@@ -113,8 +113,9 @@
 
     var _addItem = function(widgetOptions, e, $elem) {
         var count = _count($elem, widgetOptions);
-
-        if ($elem.closest('.' + widgetOptions.widgetContainer)[0]) {
+        var relatedFormWrapper = $elem.closest('.' + widgetOptions.widgetContainer)[0];
+        if (relatedFormWrapper) {
+            var index = $(relatedFormWrapper).find('.content-append').last().data('index') + 1;
             if (count < widgetOptions.limit) {
                 $toclone = widgetOptions.template;
                 $newclone = $toclone.clone(false, false);
@@ -125,7 +126,7 @@
                     $elem.closest('.' + widgetOptions.widgetContainer).find(widgetOptions.widgetBody).append($newclone);
                 }
 
-                _updateAttributes(widgetOptions);
+                //_updateAttributes(widgetOptions);
                 _restoreSpecialJs(widgetOptions);
                 _fixFormValidaton(widgetOptions);
                 $elem.closest('.' + widgetOptions.widgetContainer).triggerHandler(events.afterInsert, $newclone);
@@ -138,7 +139,7 @@
                 'cache': false,
                 'type': 'POST',
                 'dataType': 'json',
-                'data': {className: $elem[0].getAttribute("data-classname"), container: widgetOptions.widgetContainer, index: count},
+                'data': {className: $elem[0].getAttribute("data-classname"), container: widgetOptions.widgetContainer, index: index},
                 'success':
                     function (response) {
                         response.replaces[0].data = response.replaces[0].data.replace(/<form (.*?)>/, '');
@@ -199,7 +200,7 @@
             if (eventResult !== false) {
                 _removeValidations($todelete, widgetOptions, count);
                 $todelete.remove();
-                _updateAttributes(widgetOptions);
+                //_updateAttributes(widgetOptions);
                 _restoreSpecialJs(widgetOptions);
                 _fixFormValidaton(widgetOptions);
                 $('.' + widgetOptions.widgetContainer).triggerHandler(events.afterDelete);
