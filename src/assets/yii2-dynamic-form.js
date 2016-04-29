@@ -115,7 +115,11 @@
         var count = _count($elem, widgetOptions);
         var relatedFormWrapper = $elem.closest('.' + widgetOptions.widgetContainer)[0];
         if (relatedFormWrapper) {
-            var index = $(relatedFormWrapper).find('.content-append').last().data('index') + 1;
+            var index = $(relatedFormWrapper).find('.content-append').last().data('index');
+            if (index == undefined) {
+                index = -1;
+            }
+            index = index + 1;
             if (count < widgetOptions.limit) {
                 $toclone = widgetOptions.template;
                 $newclone = $toclone.clone(false, false);
