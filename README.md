@@ -1,7 +1,7 @@
 yii2-related-form
 ===================
 
-It is a widget for melon.ng to clone form elements of related models.
+It is a widget only for melon.ng to clone form elements of related models.
 
 Installation
 ------------
@@ -21,6 +21,24 @@ or add
 ```
 
 to the require section of your `composer.json` file.
+
+Usage
+------------
+
+After CRUD generating add to getFormConfig()
+```
+[
+    'class' => tolik505\relatedForm\RelatedFormWidget::className(),
+    'relation' => 'tests', //name of relation
+    /*'uploadBehavior' => [ //if needed UploadBehavior
+        [
+            'attribute' => 'file_id',
+            'extensions' => ['png', 'gif', 'jpg', 'jpeg', 'ico', 'svg'],
+            'required' => true
+        ]
+    ],*/
+]
+```
 
 ###Javascript Events
 
