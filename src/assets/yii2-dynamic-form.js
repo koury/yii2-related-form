@@ -149,6 +149,7 @@
                         response.replaces[0].data = response.replaces[0].data.replace(/<form (.*?)>/, '');
                         parseResponse(response);
                         initCheckbox();
+                        _fixFormValidaton(widgetOptions);
                     }, 'error': function (response) {
                     alert(response.responseText);
                 }, 'beforeSend': function () {
